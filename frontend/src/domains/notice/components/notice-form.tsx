@@ -86,7 +86,8 @@ export const NoticeForm: React.FC<Props> = ({
         sx={{ marginTop: '20px' }}
       />
       <TextField
-        {...register('content')}
+      // This was also the missing part that needed to be chaged in order to have the add notice page working properly
+        {...register('description')}
         error={Boolean(errors.description)}
         helperText={errors.description?.message}
         type='text'
